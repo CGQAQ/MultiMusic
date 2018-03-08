@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!--drawer dimens-->
+    <dimen name="drawer_height">220dp</dimen>
+</resources>
