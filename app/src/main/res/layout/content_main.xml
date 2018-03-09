@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cg.multimusic.MainActivity">
+    tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="match_parent">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -38,20 +37,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Singer"
+                    android:text="@string/player_singer"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvPlayerSongTitle" />
+                    app:layout_constraintTop_toBottomOf="@id/tvPlayerSongTitle" />
 
                 <ImageView
                     android:id="@+id/playerSongPic"
                     android:layout_width="327dp"
-                    android:layout_height="364dp"
+                    android:layout_height="345dp"
                     android:layout_marginTop="16dp"
+                    android:contentDescription="@string/player_song_pic_des"
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvPlayerSinger"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlayerSinger"
                     app:srcCompat="@drawable/drawer_header_img" />
 
                 <SeekBar
@@ -65,44 +65,44 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/playerSongPic" />
+                    app:layout_constraintTop_toBottomOf="@id/playerSongPic" />
 
                 <ImageButton
-                    android:id="@+id/playerBtnPlay"
+                    android:id="@+id/imageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/playerBtnPrevious"
-                    app:layout_constraintEnd_toStartOf="@+id/playerBtnNext"
-                    app:layout_constraintStart_toEndOf="@+id/playerBtnPrevious"
-                    app:layout_constraintTop_toTopOf="@+id/playerBtnPrevious"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBar"
                     app:srcCompat="@drawable/player_btn_play" />
 
                 <ImageButton
-                    android:id="@+id/playerBtnPrevious"
+                    android:id="@+id/imageButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/playerBtnPlay"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/playerBtnPlay"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton"
                     app:srcCompat="@drawable/player_btn_previous" />
 
                 <ImageButton
-                    android:id="@+id/playerBtnNext"
+                    android:id="@+id/imageButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/playerBtnPlay"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/playerBtnPlay"
-                    app:layout_constraintVertical_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton"
                     app:srcCompat="@drawable/player_btn_next" />
+
+
             </android.support.constraint.ConstraintLayout>
 
             <android.support.v7.widget.Toolbar
@@ -117,8 +117,9 @@
                     android:id="@+id/mainTabLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:tabMode="scrollable"></android.support.design.widget.TabLayout>
+                    app:tabMode="scrollable" />
             </android.support.v7.widget.Toolbar>
+
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_play_list.*
 /**
  * A simple [Fragment] subclass.
  */
-class PlayListFragment : Fragment() {
+class PlayListFragment: Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -28,16 +28,16 @@ class PlayListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-//        val recyclerViewAdapter = RecyclerViewAdapter(activity as Context)
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-//        mainPlayList.adapter = recyclerViewAdapter
-//        mainPlayList.layoutManager = LinearLayoutManager(activity)
+        val recyclerViewAdapter = RecyclerViewAdapter(activity as Context)
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        mainPlayList.adapter = recyclerViewAdapter
+        mainPlayList.layoutManager = LinearLayoutManager(activity)
 
         super.onViewCreated(view, savedInstanceState)
     }

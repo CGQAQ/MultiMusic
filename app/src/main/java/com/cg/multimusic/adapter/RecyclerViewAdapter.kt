@@ -40,7 +40,7 @@ class RecyclerViewAdapter(val context: Context): RecyclerView.Adapter<RecyclerVi
     }
 
     class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var title: TextView = itemView.findViewById(R.id.playListItemTitle)
-        var pic: ImageView = itemView.findViewById(R.id.playListItemPic)
+        var title: TextView = itemView.findViewById(R.id.playListItemTitle) as TextView
+        var pic: ImageView = itemView.findViewById(R.id.playListItemPic) as ImageView
     }
 }
