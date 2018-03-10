@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
 import com.cg.multimusic.adapter.*
+import com.cg.multimusic.fragments.PlayerFragment
 import kotlinx.android.synthetic.main.fragment_play_list.*
 
 
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        supportFragmentManager.beginTransaction().replace(R.id.content_main_player_container, PlayerFragment()).commit()
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

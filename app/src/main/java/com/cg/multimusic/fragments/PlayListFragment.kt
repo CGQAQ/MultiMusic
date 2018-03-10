@@ -29,13 +29,13 @@ class PlayListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val recyclerViewAdapter = RecyclerViewAdapter(activity as Context)
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
-        recyclerViewAdapter.addItem(R.color.colorPrimary, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
+        recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
         mainPlayList.adapter = recyclerViewAdapter
         mainPlayList.layoutManager = LinearLayoutManager(activity)
 
