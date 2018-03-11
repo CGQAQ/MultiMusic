@@ -4,26 +4,16 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import android.os.Binder
 import android.os.Bundle
 import android.os.IBinder
 import android.support.design.widget.Snackbar
-import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.view.Gravity
-import android.view.Menu
-import android.view.MenuItem
-
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
-
-import com.cg.multimusic.adapter.*
+import com.cg.multimusic.adapter.ViewPagerAdapter
 import com.cg.multimusic.fragments.PlayerFragment
 import com.cg.multimusic.services.MusicService
-import kotlinx.android.synthetic.main.fragment_play_list.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity() {

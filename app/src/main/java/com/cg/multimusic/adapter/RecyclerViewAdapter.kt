@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.cg.multimusic.R
-import kotlinx.android.synthetic.main.play_list_item.view.*
 
 /**
  * Created by mjaso on 2018/3/7.
