@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/libmultimusic.iml" filepath="$PROJECT_DIR$/libmultimusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libmultimusic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/libmultimusic_main.iml" group="libmultimusic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libmultimusic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/libmultimusic_test.iml" group="libmultimusic" />
+    </modules>
+  </component>
+</project>
