@@ -12,7 +12,7 @@ import com.cg.multimusic.R
 /**
  * Created by mjaso on 2018/3/7.
  */
-class RecyclerViewAdapter(val context: Context): RecyclerView.Adapter<RecyclerViewAdapter.CustomViewHolder>() {
+class PlayListRecyclerViewAdapter(val context: Context): RecyclerView.Adapter<PlayListRecyclerViewAdapter.CustomViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 

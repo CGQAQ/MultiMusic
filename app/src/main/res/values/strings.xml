@@ -10,4 +10,38 @@
     <!-- Player content -->
     <string name="player_song_pic_des">Song pic</string>
     <string name="player_singer">Singer</string>
+
+
+    <!-- NETEASE,
+        QQ,
+        KUGOU,
+        KUWO,
+        XIAMI,
+        BAIDU,
+        `1TING`,
+        MIGU,
+        LIZHI,
+        QINGTING,
+        XIMALAYA,
+        KEIGE,
+        `5SINGYINYUE`,
+        `5SINGFANCHANG`,
+        SOUNDCLOUD-->
+    <string-array name="services_spinner">
+        <item>网易云音乐</item>
+        <item>QQ音乐</item>
+        <item>酷狗音乐</item>
+        <item>酷我音乐</item>
+        <item>虾米音乐</item>
+        <item>百度音乐</item>
+        <item>一听音乐</item>
+        <item>咪咕</item>
+        <item>荔枝</item>
+        <item>蜻蜓FM</item>
+        <item>喜马拉雅</item>
+        <item>全民k歌</item>
+        <item>5sing原创</item>
+        <item>5sing翻唱</item>
+        <item>SoundCloud</item>
+    </string-array>
 </resources>

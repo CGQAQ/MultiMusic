@@ -9,9 +9,9 @@ object MusicScanner {
 
 
     public fun scan(path: String) {
-        val path = File(path)
-        if(path.exists() && path.isDirectory) {
-            val files: Array<out File> = path.listFiles()
+        val pathObj: File = File(path)
+        if(pathObj.exists() && pathObj.isDirectory) {
+            val files: Array<out File> = pathObj.listFiles()
             if (files.isNotEmpty()) {
                 files.iterator().forEach {
                     if (it.isFile and reg.containsMatchIn(it.absolutePath)){

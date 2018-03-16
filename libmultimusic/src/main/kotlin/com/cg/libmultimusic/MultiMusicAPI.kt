@@ -6,6 +6,8 @@ import com.github.kittinunf.fuel.core.Request
 import com.google.gson.Gson
 import org.intellij.lang.annotations.Language
 
+import kotlinx.coroutines.*
+import kotlinx.coroutines.experimental.launch
 
 
 object MultiMusicAPI{
@@ -37,7 +39,7 @@ object MultiMusicAPI{
      * @param type 搜索平台
      * @return 搜索结果
      */
-    fun search(name: String, type: ServiceType): Result{
+    suspend fun search(name: String, type: ServiceType): Result{
         this.page = 1
         this.name = name
         this.type = type
@@ -45,22 +47,23 @@ object MultiMusicAPI{
         return Gson().fromJson(result, Result::class.java)
     }
 
-    fun nextPage(): Result{
+    suspend fun nextPage(): Result{
         this.page ++
         val result = query(this.name, this.type, this.page)
         return Gson().fromJson(result, Result::class.java)
     }
-    fun previousPage(): Result{
+    suspend fun previousPage(): Result{
         if (-- this.page < 1) this.page = 1
         val result = query(this.name, this.type, this.page)
         return Gson().fromJson(result, Result::class.java)
     }
 
-    private fun query(name: String, type: ServiceType, page: Int): String {
-        val request: Request = Fuel.post(this.baseUrlString, listOf("input" to name, "filter" to "name", "type" to services[type.ordinal], "page" to page))
+    private suspend fun query(name: String, type: ServiceType, page: Int): String {
+        var ret: String
+        val request: Request = Fuel.post(this@MultiMusicAPI.baseUrlString, listOf("input" to name, "filter" to "name", "type" to services[type.ordinal], "page" to page))
         request.header("Referer" to "https://music.2333.me/", "x-requested-with" to "XMLHttpRequest", "User-Agent" to "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36")
         val (_, _, result) = request.responseString()
-        return result.component1() ?: ""
+        return result.get()
     }
 
 

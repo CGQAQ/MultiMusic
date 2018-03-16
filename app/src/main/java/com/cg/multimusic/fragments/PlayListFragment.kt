@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.cg.multimusic.R
-import com.cg.multimusic.adapter.RecyclerViewAdapter
+import com.cg.multimusic.adapter.PlayListRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_play_list.*
 
 
@@ -28,7 +28,7 @@ class PlayListFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val recyclerViewAdapter = RecyclerViewAdapter(activity as Context)
+        val recyclerViewAdapter = PlayListRecyclerViewAdapter(context)
         recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
         recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")
         recyclerViewAdapter.addItem(R.color.primaryLightColor, "nihao")

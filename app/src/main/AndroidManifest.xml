@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cg.multimusic">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,6 +30,16 @@
             android:exported="false">
 
         </service>
+        
+        <receiver android:name=".broadcastreceiver.MusicBCR">
+            <intent-filter >
+                <action android:name="com.cg.multimusic.play" />
+                <action android:name="com.cg.multimusic.Resume" />
+                <action android:name="com.cg.multimusic.pause" />
+                <action android:name="com.cg.multimusic.stop" />
+
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
