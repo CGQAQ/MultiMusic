@@ -15,8 +15,6 @@ class TestMultiMusicAPI {
 
             val result3 = MultiMusicAPI.previousPage()
             assert(result3.code == 200)
-
         }
-
     }
 }

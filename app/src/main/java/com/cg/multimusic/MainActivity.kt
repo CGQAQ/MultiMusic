@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
         init()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        unbindService(musicServiceConnection)
+    }
+
     private fun startMusicService() {
         val musicServiceIntent = Intent(applicationContext, MusicService::class.java)
         startService(musicServiceIntent)
@@ -66,12 +71,15 @@ class MainActivity : AppCompatActivity() {
 }
 
 
+
+
 class MusicServiceConnection: ServiceConnection {
-     lateinit var musicService: MusicService;
+     var musicService: MusicService? = null;
 
 
     override fun onServiceDisconnected(name: ComponentName) {
         Log.d("onServiceDisconnected", name.shortClassName)
+        musicService = null
     }
 
     override fun onServiceConnected(name: ComponentName, service: IBinder) {

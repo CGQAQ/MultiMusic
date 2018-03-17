@@ -12,7 +12,7 @@ import com.cg.multimusic.R
 /**
  * Created by jason on 3/16/18.
  */
-class SearchResultAdapter(context: Context): RecyclerView.Adapter<SearchResultAdapter.CustomViewHolder>() {
+class SearchResultAdapter(val context: Context): RecyclerView.Adapter<SearchResultAdapter.CustomViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
@@ -22,7 +22,7 @@ class SearchResultAdapter(context: Context): RecyclerView.Adapter<SearchResultAd
 
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CustomViewHolder {
-        val view = inflater.inflate(R.layout.search_result_item, parent)
+        val view = inflater.inflate(R.layout.search_result_item, parent, false)
         return CustomViewHolder(view)
     }
 

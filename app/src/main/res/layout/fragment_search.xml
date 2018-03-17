@@ -40,6 +40,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="请输入歌曲名称"
+        android:singleLine="true"
         app:layout_constraintEnd_toStartOf="@+id/btnSearch"
         app:layout_constraintStart_toEndOf="@+id/spSearchFragmentServices"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,6 +53,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="11dp"
+        android:background="@drawable/drawer_header_img"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
